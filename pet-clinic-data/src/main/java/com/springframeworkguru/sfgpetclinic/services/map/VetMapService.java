@@ -30,6 +30,6 @@ public class VetMapService extends AbstractMapService<Vet, Long> implements CRUD
 
     @Override
     public void save(Vet vet) {
-
+        super.save(vet.getId(), vet);
     }
 }
