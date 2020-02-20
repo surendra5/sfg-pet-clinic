@@ -1,11 +1,11 @@
 package com.springframeworkguru.sfgpetclinic.services.map;
 
 import com.springframeworkguru.sfgpetclinic.model.Pet;
-import com.springframeworkguru.sfgpetclinic.services.CRUDService;
+import com.springframeworkguru.sfgpetclinic.services.PetService;
 
 import java.util.Set;
 
-public class PetMapService extends AbstractMapService<Pet, Long> implements CRUDService<Pet, Long> {
+public class PetMapService extends AbstractMapService<Pet, Long> implements PetService {
 
 
     @Override
@@ -29,7 +29,7 @@ public class PetMapService extends AbstractMapService<Pet, Long> implements CRUD
     }
 
     @Override
-    public void save(Pet pet) {
-        super.save(pet.getId(), pet);
+    public Pet save(Pet pet) {
+        return super.save(pet);
     }
 }
