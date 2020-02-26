@@ -5,6 +5,7 @@ import com.springframeworkguru.sfgpetclinic.services.VetService;
 
 import java.util.Set;
 
+@Service
 public class VetMapService extends AbstractMapService<Vet, Long> implements VetService {
 
 
