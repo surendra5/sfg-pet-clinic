@@ -29,6 +29,13 @@ public class DataLoader implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
+        int count = petTypeService.findAll().size();
+        if (count == 0)
+            loadData();
+
+    }
+
+    private void loadData() {
         PetType dog = new PetType();
         dog.setName("Dog");
         //DOUBT:- petTypeService obj should be a object of petTypeMapservice created with PetService Interface
@@ -96,6 +103,5 @@ public class DataLoader implements CommandLineRunner {
         vet2.getSpecialities().add(savedDentistry);
 
         System.out.println("Loaded vets....");
-
     }
 }
