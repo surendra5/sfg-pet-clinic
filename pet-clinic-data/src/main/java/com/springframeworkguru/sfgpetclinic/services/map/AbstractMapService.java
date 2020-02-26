@@ -20,7 +20,7 @@ public abstract class AbstractMapService<T extends BaseEntity, ID extends Long> 
 
         if(object != null){
             if(object.getId() == null)
-                map.put(getNextId(), object);
+                object.setId(getNextId());
             map.put(object.getId(), object);
         }
         else{
@@ -41,7 +41,7 @@ public abstract class AbstractMapService<T extends BaseEntity, ID extends Long> 
 
         Long nextId=null;
         try{
-            return Collections.max(map.keySet()) + 1;
+            nextId = Collections.max(map.keySet()) + 1;
         }catch (NoSuchElementException e){
             nextId = 1L;
         }
