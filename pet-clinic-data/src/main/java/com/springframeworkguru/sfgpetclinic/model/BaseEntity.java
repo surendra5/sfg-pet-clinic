@@ -6,7 +6,7 @@ import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 import java.io.Serializable;
 
-@MappedSuperclass
+@MappedSuperclass //tells JPA that this object is not to be created in database
 public class BaseEntity implements Serializable {
 
     @Id
