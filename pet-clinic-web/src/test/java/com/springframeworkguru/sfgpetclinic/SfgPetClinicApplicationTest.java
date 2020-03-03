@@ -1,16 +1,20 @@
 package com.springframeworkguru.sfgpetclinic;
 
-import org.junit.Test;
+import org.junit.Ignore;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
-class SfgPetClinicApplicationTests {
+class SfgPetClinicApplicationTest {
 
-    @Test
-    void contextLoads() {
+    @BeforeEach
+    void setUp() {
     }
 
+    @Ignore
+    void main() {
+    }
 }
